@@ -1,0 +1,29 @@
+{
+  "name": "reto2BackEnd",
+  "version": "1.0.0",
+  "description": "reto2 de hackspace - backend",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.2",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jtavara23/reto2BackEnd.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Josue Tavara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jtavara23/reto2BackEnd/issues"
+  },
+  "homepage": "https://github.com/jtavara23/reto2BackEnd#readme"
+}
