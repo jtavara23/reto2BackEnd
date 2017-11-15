@@ -6,8 +6,8 @@ var Schema = mongoose.Schema
 
 // Definición del esquema
 var amigoSchema = new Schema({
-    nombres: { type: String, required: true, unique: true },
-    apellidos: { type: String, required: true, unique: true  },
+    nombres: { type: String},
+    apellidos: { type: String },
     created: { type: Date, default: Date.now },
 })
 

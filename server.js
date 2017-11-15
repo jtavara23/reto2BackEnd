@@ -38,9 +38,10 @@ var Amigo = require('./models/amigo');
 // PETICIONES
 // Cuando exista una petición en el servidor  
 server.get('/', function (req, res) {
-    User.find().then(
+    User.find()
+    .then(
         function (usuarios) {//viene de la BD
-            console.log("returning " + usuarios[0].amigos[0]);
+         //   console.log("returning " + usuarios);
             res.render('template.html', { users: usuarios });
         }
     )
@@ -73,7 +74,7 @@ server.get('/formulario/', function (req, res) {
 
 
 server.post('/formulario/', function (req, res) {
-    console.log("Post APELLIDO "+req.body.apellidos); //imprimir en consola
+    //console.log("Post APELLIDO "+req.body.apellidos); //imprimir en consola
     // Regitro de informacion del formulario
     var nombres = req.body.nombres;
     var apellidos = req.body.apellidos;
@@ -90,7 +91,7 @@ server.post('/formulario/', function (req, res) {
             User.findOne({ apellidos: "Tavara Idrogo" , nombres: "Josue Gaston"}).then(function (detalle_usu) {
                 detalle_usu.amigos.push({
                     nombres: amigo.nombres,
-                    username: amigo.apellidos,
+                    apellidos: amigo.apellidos,
                     ref: amigo._id
                 });
                 // Guardar los cambios hechos en la especialidad
